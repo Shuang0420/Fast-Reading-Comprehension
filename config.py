@@ -24,7 +24,7 @@ if not os.path.exists(train_dir):
     os.mkdir(train_dir)
 if not os.path.exists(os.path.join(os.getcwd(),dir_name)):
     os.mkdir(os.path.join(os.getcwd(),dir_name))
-target_dir = "data"
+target_dir = "data_ori"
 log_dir = os.path.join(dir_name, "event")
 save_dir = os.path.join(dir_name, "model")
 answer_dir = os.path.join(dir_name, "answer")
@@ -106,7 +106,7 @@ flags.DEFINE_float("learning_rate", 0.001, "Learning rate")
 flags.DEFINE_float("decay", 0.9999, "Exponential moving average decay")
 flags.DEFINE_float("l2_norm", 3e-7, "L2 norm scale")
 flags.DEFINE_integer("hidden", 96, "Hidden size")
-flags.DEFINE_integer("num_heads", 1, "Number of heads in self attention")
+flags.DEFINE_integer("num_heads", 8, "Number of heads in self attention")
 flags.DEFINE_boolean("q2c", True, "Whether to use query to context attention or not")
 
 # Extensions (Uncomment corresponding code in download.sh to download the required data)
